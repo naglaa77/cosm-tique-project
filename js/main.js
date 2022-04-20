@@ -16,6 +16,7 @@ closeNav.onclick = () => {
 }
 window.onscroll = () => {
     navbar.classList.remove('active');
+    searchForm.classList.remove('active');
 }
 
 let searchForm = document.querySelector('.search-form');
@@ -23,4 +24,21 @@ let searchIcons = document.querySelector('.icons .fa-magnifying-glass');
 
 searchIcons.onclick = () => {
     searchForm.classList.toggle('active');
+}
+
+// for slide image
+
+let slides = document.querySelectorAll('.home .slide');
+let index = 0;
+
+function next() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+function prev() {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
 }

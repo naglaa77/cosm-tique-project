@@ -58,6 +58,22 @@ section {
   padding: 5rem 9%;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border: 0.2rem solid #222;
+  background-color: #fff;
+  padding: 1rem 2.8rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #222;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #e84393;
+}
+
 /*start header*/
 .header {
   display: -webkit-box;
@@ -168,6 +184,7 @@ section {
       -ms-flex-align: end;
           align-items: flex-end;
   padding-right: 20%;
+  z-index: 1000;
 }
 
 .navbar.active {
@@ -253,9 +270,14 @@ section {
 /**start home section**/
 .home {
   padding: 0;
+  height: calc(100vh - 7rem);
 }
 
 .home .slide {
+  display: none;
+}
+
+.home .slide.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,17 +296,77 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #fce9f2;
+  position: relative;
 }
 
 .home .slide .content img {
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  -webkit-animation: fadUp .2s linear backwards .2s;
+          animation: fadUp .2s linear backwards .2s;
+  display: none;
+}
+
+.home .slide .content span {
+  display: block;
+  color: #e84393;
+  font-size: 2.5rem;
+  padding-bottom: .5rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  -webkit-animation: fadUp .2s linear backwards .4s;
+          animation: fadUp .2s linear backwards .4s;
+}
+
+.home .slide .content h3 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  color: #222;
+  -webkit-animation: fadUp .2s linear backwards .6s;
+          animation: fadUp .2s linear backwards .6s;
+}
+
+.home .slide .content .btn {
+  -webkit-animation: fadUp .2s linear backwards .8s;
+          animation: fadUp .2s linear backwards .8s;
+}
+
+.home .slide .content .controls {
+  position: absolute;
+  bottom: 12%;
+  right: -7rem;
+}
+
+.home .slide .content .controls i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #fff;
+  color: #222;
+  margin: 0 1rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.home .slide .content .controls i:hover {
+  background-color: #e84393;
+  color: #fff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .home .slide .image {
   width: 50%;
+  height: 100%;
 }
 
 .home .slide .image img {
