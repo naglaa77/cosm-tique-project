@@ -225,7 +225,7 @@ section {
 /**start home section**/
 .home {
     padding: 0;
-     height: calc(100vh - 7rem);
+    //  height: calc(100vh - 7rem);
     .slide {
         display: none;
         &.active {
@@ -291,7 +291,6 @@ section {
         }
         .image {
             width: 50%;
-            height: 100%;
             img {
                 width: 100%;
                 height: 100%;
@@ -300,4 +299,122 @@ section {
         }
     }
 }
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    section {
+        padding: 5rem 2rem;
+    }
+    .home .slide {
+        .content {
+            padding: 2rem;
+            span {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+ .home .slide {
+     position: relative;
+     height: calc(100vh - 6rem);
+     .content {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(255,255,255,.7);
+         align-items: center;
+         img {
+             display: inline-block;
+         }
+         .controls {
+             position: static;
+             margin-top: 7rem;
+             i {
+                 margin: 0 .5rem;
+             }
+         }
+     }
+     .image {
+         width: 100%;
+     }
+ }
+
+}
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
 /**end home section**/
+
+/*start category*/
+.category {
+    @include grid(16rem);
+    padding: 9rem 9%;
+    .box {
+        padding: 2rem;
+        border-radius: .5rem;
+        background-color: $light-bg;
+        text-align: center;
+        &:hover {
+            background-color: $black ;
+            img {
+                filter: invert(1);
+            }
+            p {
+                color: $white;
+            }
+        }
+        img {
+            height: 10rem;   // when i decide the height so i don't need to make widthh 100% because it will be adapte 
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.7rem;
+            color: $black;
+        }
+    }
+}
+/*End category*/
+
+/*start about us*/
+.about {
+    background: url('../images/about-bg.jpg') no-repeat;
+    background-size: cover;  // image cover all screen as if section has padding
+    background-position: center;
+    background-attachment: fixed;  // when i scroll the image rest fixed
+    display: flex;
+    align-items: center;
+    .content {
+        width: 55rem;
+        background-color: $white;
+        padding: 3rem;
+        span {
+            color: $pink;
+            font-size: 2rem;
+        }
+        h3 {
+            padding-top: 1.5rem;
+            font-size: 3rem;
+            color: $black;
+        }
+        p {
+            font-size: 1.5rem;
+            color: $light-color;
+            padding: 1rem 0;
+            line-height: 1.6;
+        }
+    }
+}
+/*end about us*/
