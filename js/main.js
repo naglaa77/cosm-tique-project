@@ -20,8 +20,8 @@ window.onscroll = () => {
 }
 
 let searchForm = document.querySelector('.search-form');
-let searchIcons = document.querySelector('.icons .fa-magnifying-glass');
-
+let searchIcons = document.querySelector('.search-form .fa-magnifying-glass');
+console.log(searchIcons);
 searchIcons.onclick = () => {
     searchForm.classList.toggle('active');
 }
@@ -34,13 +34,33 @@ let index = 0;
 function next() {
     slides[index].classList.remove('active');
     index = (index + 1) % slides.length; //length = 3
-    console.log((index + 1) % slides.length);
     slides[index].classList.add('active');
 }
 
 function prev() {
     slides[index].classList.remove('active');
     index = (index - 1 + slides.length) % slides.length;
-    console.log((index - 1 + slides.length) % slides.length);
     slides[index].classList.add('active');
 }
+
+// slider shop section
+let containerSlide = [...document.querySelectorAll('.products-slider')];
+let icremenBtn = [...document.querySelectorAll('.shop i.fa-greater-than')];
+let decrementBtn = [...document.querySelectorAll('.shop i.fa-less-than')];
+let slide = document.querySelectorAll('.shop .products-slider .slide');
+console.log(containerSlide);
+
+containerSlide.forEach((item,i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width; 
+
+    icremenBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    });
+
+    decrementBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    });
+
+
+})
