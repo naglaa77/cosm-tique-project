@@ -578,3 +578,84 @@ section {
     }
 }
 /*end shop section*/
+
+/*start blog*/
+.reviews-wrapper {
+    position: relative;
+    height: 40rem;
+    .reviews-item {
+        text-align: center;
+        padding: 3rem;
+        display: none;
+        width: 77%;
+        max-width: 1080px;
+        margin: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+        &.activeSlide {
+            display: block;
+        }
+        .reviews-title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .text {
+            font-size: 1.5rem;
+            color: #777;
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+        }
+    }
+    .pre-btn,
+    .next-btn {
+        position: absolute;
+        font-size: 1.5rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: none;
+        background-color: $pink;
+        color: $black;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .pre-btn {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .next-btn {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+    }
+}
+@media (max-width: 991px) {
+    section {
+        padding: 1rem 2rem;
+    }
+
+}
+@media (max-width: 768px) {
+
+ }
+
+@media (max-width: 450px) {
+    .reviews-wrapper .reviews-item .reviews-title {
+        font-size: 3.5rem;
+    }
+    .reviews-wrapper .reviews-item .text {
+        font-size: 1.4rem;
+    }
+}
+/*end blog*/

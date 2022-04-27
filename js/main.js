@@ -47,13 +47,13 @@ function prev() {
 let containerSlide = [...document.querySelectorAll('.products-slider')];
 let icremenBtn = [...document.querySelectorAll('.shop i.fa-greater-than')];
 let decrementBtn = [...document.querySelectorAll('.shop i.fa-less-than')];
-let slide = document.querySelectorAll('.shop .products-slider .slide');
+let slide = [...document.querySelectorAll('.shop .products-slider .slide')];
 console.log(containerSlide);
 
 containerSlide.forEach((item,i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width; 
-
+    console.log(containerWidth);
     icremenBtn[i].addEventListener('click', () => {
         item.scrollLeft += containerWidth;
     });
@@ -64,3 +64,48 @@ containerSlide.forEach((item,i) => {
 
 
 })
+
+// bloge section
+let preBtn = document.querySelector('.pre-btn');
+let nextBtn = document.querySelector('.next-btn');
+let reviewsSlide = document.querySelectorAll('.reviews-item');
+console.log(preBtn);
+let idCount = 0;
+showCurrentSlide(idCount);
+
+function showCurrentSlide(id) {
+    hideAllSlide();
+    reviewsSlide.forEach((item,idx) => {
+
+        if(id == idx) {
+            item.classList.add('activeSlide');
+        }
+    });
+}
+
+function hideAllSlide() {
+
+    reviewsSlide.forEach((item) => {
+
+        item.classList.remove('activeSlide');
+    });
+}
+
+preBtn.addEventListener('click', () => {
+
+    idCount--;
+    if(idCount < 0) {
+
+        idCount = reviewsSlide.length - 1;
+    }
+    showCurrentSlide(idCount);
+});
+nextBtn.addEventListener('click', () => {
+
+    idCount++;
+    if(idCount == reviewsSlide.length) {
+
+        idCount = 0;
+    }
+    showCurrentSlide(idCount);
+});
