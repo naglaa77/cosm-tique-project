@@ -228,6 +228,8 @@ section {
   font-size: 4rem;
   color: #fff;
   font-weight: lighter;
+  margin-bottom: 2rem;
+  font-weight: 500S;
 }
 
 .navbar a:hover {
@@ -245,6 +247,12 @@ section {
   }
   section {
     padding: 5rem 2rem;
+  }
+  .navbar a {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    padding-right: 3rem;
   }
 }
 
@@ -269,6 +277,12 @@ section {
   }
   .header .search-form.active {
     display: block;
+  }
+  .navbar a {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    padding-right: 3rem;
   }
 }
 
