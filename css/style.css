@@ -485,6 +485,15 @@ section {
   color: #222;
 }
 
+@media (max-width: 1024px) {
+  .category .box img {
+    height: 7rem;
+  }
+  .category .box {
+    padding: 0.5rem;
+  }
+}
+
 /*End category*/
 /*start about us*/
 .about {
@@ -522,6 +531,12 @@ section {
   color: #777;
   padding: 1rem 0;
   line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .about {
+    padding: 3rem 2rem;
+  }
 }
 
 /*end about us*/
@@ -588,7 +603,7 @@ section {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   width: 28rem;
-  border: 0.2rem solid #222;
+  border: 0.2rem solid #22222238;
   background-color: #fff;
   min-width: 17%;
 }
@@ -603,7 +618,7 @@ section {
 }
 
 .shop .products-slider .slide .image {
-  height: 35rem;
+  height: 27rem;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -669,7 +684,6 @@ section {
 .shop .products-slider .slide .content p {
   font-size: 2rem;
   color: #222;
-  line-height: 2;
 }
 
 .shop .products-slider .slide .content .price {
@@ -740,7 +754,8 @@ section {
 /*end shop section*/
 /*start blog*/
 .reviews {
-  padding: 1rem 9% 5rem;
+  padding: 5rem 9% 5rem;
+  border-top: 1px solid #ddd0dc;
 }
 
 .reviews .reviews-wrapper {
@@ -832,6 +847,27 @@ section {
   .reviews {
     padding: 1rem 9% 12rem;
   }
+  .reviews .reviews-wrapper .reviews-item .text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .reviews .reviews-wrapper .reviews-item .reviews-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 8rem;
+  }
+  .reviews .reviews-wrapper .reviews-item {
+    padding: 1rem;
+    width: 86%;
+  }
+  .reviews .reviews-wrapper .pre-btn,
+  .reviews .reviews-wrapper .next-btn {
+    z-index: 10;
+    top: 101%;
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (max-width: 280px) {
@@ -846,9 +882,180 @@ section {
   .reviews-wrapper .reviews-item {
     padding: 1rem;
   }
+  .reviews .reviews-wrapper .reviews-item .text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .reviews .reviews-wrapper .reviews-item .reviews-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 8rem;
+  }
+  .reviews .reviews-wrapper .reviews-item {
+    padding: 1rem;
+    width: 86%;
+  }
+  .reviews .reviews-wrapper .pre-btn,
+  .reviews .reviews-wrapper .next-btn {
+    z-index: 10;
+    top: 101%;
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 /*end blog*/
+/*Start contact*/
+.contact {
+  padding: 1rem 9% 11rem;
+  border-top: 1px solid #ddd0dc;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  color: #222;
+  text-align: center;
+  margin: 5rem 0 7rem;
+}
+
+.contact .wraaper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .wraaper .text-contact {
+  background-color: #bd176724;
+  padding: 1rem 3rem 2rem;
+  width: 50%;
+}
+
+.contact .wraaper .text-contact h3 {
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.contact .wraaper .text-contact p {
+  font-size: 1.4rem;
+  color: #342f2f;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact .wraaper form {
+  width: 50%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.contact .wraaper form input,
+.contact .wraaper form textarea,
+.contact .wraaper form button {
+  width: 45rem;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd0dc;
+}
+
+.contact .wraaper form textarea {
+  resize: none;
+  height: 16rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact .wraaper form .btn-contact {
+  width: 20rem;
+  background-color: #bd176724;
+  border: none;
+  font-size: 1.5rem;
+  color: #222;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact .wraaper form .btn-contact:hover {
+  color: #fff;
+  background-color: #222;
+}
+
+@media (max-width: 1176px) {
+  .contact {
+    padding: 5rem 2rem;
+  }
+  .contact .wraaper {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 891px) {
+  .contact .wraaper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4rem;
+  }
+  .contact .wraaper .text-contact,
+  .contact .wraaper form {
+    padding: 1rem 3rem 6rem;
+    width: 90%;
+    margin: auto;
+  }
+  .contact .wraaper form input,
+  .contact .wraaper form textarea,
+  .contact .wraaper form button {
+    width: 100%;
+  }
+  .contact .wraaper .text-contact p {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    width: 76%;
+    margin: 1.7rem auto;
+  }
+  .contact .wraaper form .btn-contact {
+    width: 25rem;
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 592px) {
+  .contact .wraaper .text-contact p {
+    width: 95%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact .wraaper .text-contact,
+  .contact .wraaper form {
+    width: 100%;
+  }
+  .contact .wraaper .text-contact, .contact .wraaper form {
+    padding: 1rem 0rem 6rem;
+  }
+  .contact h2 {
+    margin: 2rem 0 5rem;
+  }
+  .contact {
+    padding: 3rem 2rem 0;
+  }
+}
+
+/*End contact*/
 /*start footer*/
 footer {
   background-color: #222;

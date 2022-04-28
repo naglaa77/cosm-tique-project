@@ -396,6 +396,14 @@ section {
         }
     }
 }
+@media (max-width: 1024px) {
+    .category .box img {
+        height: 7rem;
+    }
+    .category .box {
+        padding: 0.5rem
+    }
+}
 /*End category*/
 
 /*start about us*/
@@ -425,6 +433,11 @@ section {
             padding: 1rem 0;
             line-height: 1.6;
         }
+    }
+}
+@media (max-width: 991px){
+    .about {
+        padding: 3rem 2rem;
     }
 }
 /*end about us*/
@@ -473,7 +486,7 @@ section {
         .slide {
             flex: 0 0 auto;
             width: 28rem;
-            border: $border;
+            border: 0.2rem solid #22222238;
             background-color: $white;
             min-width: 17%;
             &:hover .image {
@@ -485,7 +498,7 @@ section {
                 }
             }
             .image {
-                height: 35rem;
+                height: 27rem;
                 width: 100%;
                 position: relative;
                 overflow: hidden;
@@ -539,7 +552,6 @@ section {
                 p {
                     font-size: 2rem;
                     color: $black;
-                    line-height: 2;
                 }
                 .price {
                     font-size: 2rem;
@@ -610,7 +622,8 @@ section {
 
 /*start blog*/
 .reviews {
-    padding: 1rem 9% 5rem;
+    padding: 5rem 9% 5rem;
+    border-top: 1px solid #ddd0dc;
     .reviews-wrapper {
         position: relative;
         height: 20rem;
@@ -693,6 +706,27 @@ section {
     .reviews {
         padding: 1rem 9% 12rem;
     }
+    .reviews .reviews-wrapper .reviews-item .text {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    .reviews .reviews-wrapper .reviews-item .reviews-title {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 8rem;
+    }
+    .reviews .reviews-wrapper .reviews-item {
+        padding: 1rem;
+        width: 86%;
+    }
+    .reviews .reviews-wrapper .pre-btn,
+    .reviews .reviews-wrapper .next-btn {
+        z-index: 10;
+        top: 101%;
+        width: 3rem;
+        height: 3rem;
+    }
 }
 @media (max-width: 280px) {
     .reviews-wrapper .reviews-item .text {
@@ -706,8 +740,156 @@ section {
     .reviews-wrapper .reviews-item  {
         padding: 1rem;
     }
+    .reviews .reviews-wrapper .reviews-item .text {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    .reviews .reviews-wrapper .reviews-item .reviews-title {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 8rem;
+    }
+    .reviews .reviews-wrapper .reviews-item {
+        padding: 1rem;
+        width: 86%;
+    }
+    .reviews .reviews-wrapper .pre-btn,
+    .reviews .reviews-wrapper .next-btn {
+        z-index: 10;
+        top: 101%;
+        width: 3rem;
+        height: 3rem;
+    }
 }
 /*end blog*/
+
+/*Start contact*/
+.contact {
+    padding: 1rem 9% 11rem;
+    border-top: 1px solid #ddd0dc;
+    h2 {
+        font-size: 3rem;
+        color: $black;
+        text-align: center;
+        margin: 5rem 0 7rem;
+    }
+    .wraaper {
+        display: flex;
+        .text-contact {
+            background-color: #bd176724;
+            padding: 1rem 3rem 2rem;
+            width: 50%;
+            h3 {
+                font-size: 2.5rem;
+                color: black;
+                text-align: center;
+                padding: 2rem 0;
+            }
+            p {
+                font-size: 1.4rem;
+                color: #342f2f;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+            }
+        }
+        form {
+            width: 50%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+           align-items: center;
+           gap: 1.5rem;
+            input,
+            textarea,
+            button {
+                width: 45rem;
+                padding: 1.5rem 1rem;
+                border-radius: 5px;
+                border: 1px solid #ddd0dc;
+            }
+            textarea {
+                resize: none;
+                height: 16rem;
+                margin-bottom: 1.5rem;
+            }
+            .btn-contact {
+                width: 20rem;
+                background-color: #bd176724;
+                border: none;
+                font-size: 1.5rem;
+                color: $black;
+                cursor: pointer;
+                text-transform: uppercase;
+                &:hover {
+                    color: $white;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1176px) {
+    .contact {
+        padding: 5rem 2rem;
+    }
+    .contact .wraaper {
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width: 891px) {
+    .contact .wraaper {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .contact .wraaper .text-contact,
+    .contact .wraaper form {
+        padding: 1rem 3rem 6rem;
+        width: 90%;
+        margin: auto;
+    }
+    .contact .wraaper form input,
+    .contact .wraaper form textarea,
+    .contact .wraaper form button {
+        width: 100%;
+    }
+    .contact .wraaper .text-contact p {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        width: 76%;
+        margin: 1.7rem auto;
+    }
+    .contact .wraaper form .btn-contact {
+        width: 25rem;
+        font-size: 1.9rem;
+    }
+
+}
+
+@media (max-width: 592px) {
+    .contact .wraaper .text-contact p  {
+        width: 95%;
+        text-align: center;
+    }
+}
+@media (max-width: 450px) {
+    .contact .wraaper .text-contact, 
+    .contact .wraaper form  {
+        width: 100%;
+    }
+    .contact .wraaper .text-contact, .contact .wraaper form {
+        padding: 1rem 0rem 6rem;  
+    }
+    .contact h2 {
+        margin: 2rem 0 5rem;
+    }
+    .contact {
+        padding: 3rem 2rem 0;
+    }
+}
+
+/*End contact*/
 
 /*start footer*/
 footer {
@@ -740,9 +922,6 @@ footer {
     footer .footer-elements p {
         font-size: 1.3rem;
     }
-    
-element.style {
-}
 footer .footer-elements .social i {
     font-size: 1.5rem;
     }
