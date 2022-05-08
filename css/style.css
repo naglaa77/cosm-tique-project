@@ -267,10 +267,11 @@ section {
     left: 0;
     border-top: 0.2rem solid #222;
     border-bottom: 0.2rem solid #222;
+    border-radius: 0;
     width: 100%;
     background-color: #fff;
     height: 6rem;
-    display: none;
+    display: block;
     -webkit-animation: fadeUp .2 linear backwards;
             animation: fadeUp .2 linear backwards;
     padding-top: 1rem;
@@ -428,7 +429,7 @@ section {
   }
   .home .slide .content {
     position: absolute;
-    top: 0;
+    top: 5rem;
     left: 0;
     width: 100%;
     height: 100%;
@@ -562,7 +563,7 @@ section {
 }
 
 .shop .products-slider {
-  height: 60rem;
+  height: 49rem;
   padding: .5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,6 +739,13 @@ section {
   }
   .shop {
     padding: 5rem 2rem;
+  }
+  .shop .products-slider {
+    height: 45rem;
+  }
+  .shop .products-slider i.fa-less-than,
+  .shop .products-slider i.fa-greater-than {
+    display: none;
   }
 }
 
@@ -1008,7 +1016,7 @@ section {
 
 @media (max-width: 1176px) {
   .contact {
-    padding: 5rem 2rem;
+    padding: 1rem 2rem;
   }
   .contact .wraaper {
     margin-bottom: 3rem;
@@ -1110,6 +1118,7 @@ footer .footer-elements .social i {
   display: block;
   margin: 1rem;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
