@@ -8,7 +8,7 @@
   text-transform: capitalize;
   text-decoration: none;
   -webkit-transition: all .5 linear;
-  transition: all .5 linear;
+  transition: all .5s linear;
 }
 
 @-webkit-keyframes fadeUp {
