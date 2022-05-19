@@ -209,7 +209,7 @@ section {
   height: 4rem;
   width: 4rem;
   background-color: #fff;
-  top: 01;
+  top: 0px;
   right: 10vw;
   top: 13%;
   line-height: 4rem;
@@ -229,7 +229,7 @@ section {
   color: #fff;
   font-weight: lighter;
   margin-bottom: 2rem;
-  font-weight: 500S;
+  font-weight: 500;
 }
 
 .navbar a:hover {
